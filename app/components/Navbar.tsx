@@ -14,13 +14,13 @@ export default function Navbar() {
           if (!(isLogin || isSignin)) {
             return (
               <Link
-                className="h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative"
+                className="h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative "
                 key={navLink.name}
                 href={navLink.src}
               >
                 {navLink.name}
                 {pathname == navLink.src ? (
-                  <span className="active aniBord"></span>
+                  <span className="aniBord"></span>
                 ) : (
                   ""
                 )}
@@ -38,13 +38,13 @@ export default function Navbar() {
           if (isLogin || isSignin) {
             return (
               <Link
-                className="h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative"
+                className="h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative border-black border-[3px] rounded-md px-4 z-10"
                 key={navLink.name}
                 href={navLink.src}
               >
                 {navLink.name}
                 {pathname == navLink.src ? (
-                  <span className="active aniBord"></span>
+                  <span className="authBtn"></span>
                 ) : (
                   ""
                 )}
