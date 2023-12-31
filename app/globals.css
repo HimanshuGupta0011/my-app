@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+
+@layer utilities{
+    .aniBord{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .active{
+        border-bottom: 3px solid black;
+        animation-name: linkAnimation;
+        animation-duration: .2s;
+    }
+}
+
+@keyframes linkAnimation {
+    0%{
+        transform: scalex(0);
+    }
+    100%{
+        transform: scalex(1);
+    }
+}
