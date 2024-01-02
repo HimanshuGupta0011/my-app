@@ -2,6 +2,7 @@
 import { navLinks } from "../lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import navbar from'./style/navbar.module.css'
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,7 +21,7 @@ export default function Navbar() {
               >
                 {navLink.name}
                 {pathname == navLink.src ? (
-                  <span className="aniBord"></span>
+                  <span className={navbar.aniBord}></span>
                 ) : (
                   ""
                 )}
@@ -38,16 +39,12 @@ export default function Navbar() {
           if (isLogin || isSignin) {
             return (
               <Link
-                className="h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative border-black border-[3px] rounded-md px-4 z-10"
+                className={`h-[2.5rem] text-[1.3rem] font-semibold mx-3 p-[5px] relative border-black border-[3px] rounded-md px-4 z-10 ${navbar.authLink}`}
                 key={navLink.name}
                 href={navLink.src}
               >
                 {navLink.name}
-                {pathname == navLink.src ? (
-                  <span className="authBtn"></span>
-                ) : (
-                  ""
-                )}
+                <span className={navbar.authBtn}></span>
               </Link>
             );
           } else {

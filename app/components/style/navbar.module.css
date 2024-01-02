@@ -1,0 +1,37 @@
+.aniBord {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid black;
+    animation-name: linkAnimation;
+    animation-duration: .2s;
+}
+
+.authBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: 0%;
+    z-index: -1;  
+}
+
+.authLink:hover > .authBtn{
+    background-color: white;
+    animation-name: linkAnimation;
+    animation-duration: .2s;
+}
+
+
+
+@keyframes linkAnimation {
+    0% {
+        transform: scalex(0);
+    }
+    100% {
+        transform: scalex(1);
+    }
+}
